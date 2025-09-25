@@ -44,7 +44,7 @@ public class Calculator {
                     println("Result: " + result);
                 }
 
-                else {
+                else {  // modulo
 
                     double result = operands.getFirst();
 
@@ -76,7 +76,7 @@ public class Calculator {
             double result = operands.getFirst();
 
             for( int k = 1; k < operands.size(); k++ )
-                result += operands.get( k );
+                result *= operands.get( k );
 
             println("Result: " + result);
         }
