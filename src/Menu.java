@@ -47,14 +47,9 @@ public class Menu {
 
         Scanner scanner = new Scanner(System.in);
 
-
         ArrayList<Double> operands = new ArrayList<>();
 
-
-
         String input;
-
-
 
         while( true ) {
 
