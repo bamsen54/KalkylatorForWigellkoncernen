@@ -1,10 +1,8 @@
 
 
 import static java.io.IO.*;
-
 import java.io.IO;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
@@ -51,33 +49,33 @@ public class Menu {
 
         String input;
 
-        while( true ) {
+        try {
 
-            try {
+            IO.println("Skriv in flytal separerade med mellanslag:");
+            input = scanner.nextLine();
+            input = input.replaceAll("\n", " ");
+            input = input.replaceAll("\t", " ");
+            input = input.replaceAll("\\s+", " ");
+            input = input.trim();
 
-                IO.println("Skriv in flytal separerade med mellanslag:");
-                input = scanner.nextLine();
-                input = input.replaceAll("\n", " ");
-                input = input.replaceAll("\t", " ");
-                input = input.replaceAll("\\s+", " ");
-                input = input.trim();
+            String[] operands_array = input.split(" ");
 
-                String[] operands_array = input.split(" ");
+            for (int k = 0; k < operands_array.length; k++)
+                operands.add(Double.parseDouble(operands_array[k]) + 0.0 );
 
-                for (int k = 0; k < operands_array.length; k++)
-                    operands.add(Double.parseDouble(operands_array[k]) + 0.0 );
+            println("");
 
-                println("");
-
-                return operands;
-            }
-
-            catch (NumberFormatException e) {
-
-                println("");
-                println("Input är inkorrekt");
-                println("");
-            }
+            return operands;
         }
+
+        catch (NumberFormatException e) {
+
+            println("");
+            println("Input är inkorrekt");
+            println("");
+        }
+
+
+        return null;
     }
 }
