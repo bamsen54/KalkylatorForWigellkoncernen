@@ -33,7 +33,7 @@ public class Menu {
                 break;
 
             else
-                IO.println("Ej korrekt val");
+                IO.println("\nEj korrekt val\n");
         }
 
         println("");
