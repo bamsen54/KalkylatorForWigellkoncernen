@@ -17,6 +17,7 @@ void main() {
             case '-' -> {  }
             case '*' -> {  }
             case '%' -> {  }
+            case '?' -> {  }
             case 'x' -> {
                 return;   // return from main exits program
             }
