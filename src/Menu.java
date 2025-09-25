@@ -4,6 +4,7 @@ import static java.io.IO.*;
 
 import java.io.IO;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
@@ -40,5 +41,40 @@ public class Menu {
         println("");
 
         return userChoice;
+    }
+
+    public static ArrayList<Double> inputOperands() {
+
+        Scanner scanner = new Scanner(System.in);
+
+
+        ArrayList<Double> operands = new ArrayList<>();
+
+        IO.println("Enter each double one after another separated with a space: ");
+
+        try {
+            String input = scanner.nextLine();
+
+            input = input.replaceAll("\n", " ");
+            input = input.replaceAll("\t", " ");
+            input = input.replaceAll("\\s+", " ");
+            input = input.trim();
+
+            println(input);
+
+            String[] operands_array = input.split(" ");
+
+            for( int k = 0; k < operands_array.length; k++ )
+                operands.add( Double.parseDouble( operands_array[k] ) );
+        }
+
+        catch (InputMismatchException e) {
+
+            println(e);
+        }
+
+        println("");
+
+        return operands;
     }
 }
