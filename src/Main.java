@@ -19,7 +19,7 @@ void main() {
             case '-' -> {  }
             case '*' -> {  }
             case '/' -> { Calculator.calculate( '/', operands ); }
-            case '%' -> {  }
+            case '%' -> { Calculator.calculate( '%', operands ); }
             case '?' -> { Help.getHelp(); }
             case 'x' -> {
                 return;   // return from main exits program
