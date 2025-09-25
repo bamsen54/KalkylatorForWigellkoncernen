@@ -50,31 +50,38 @@ public class Menu {
 
         ArrayList<Double> operands = new ArrayList<>();
 
-        IO.println("Enter each double one after another separated with a space: ");
 
-        try {
-            String input = scanner.nextLine();
 
-            input = input.replaceAll("\n", " ");
-            input = input.replaceAll("\t", " ");
-            input = input.replaceAll("\\s+", " ");
-            input = input.trim();
+        String input;
 
-            println(input);
 
-            String[] operands_array = input.split(" ");
 
-            for( int k = 0; k < operands_array.length; k++ )
-                operands.add( Double.parseDouble( operands_array[k] ) );
+        while( true ) {
+
+            try {
+
+                IO.println("Skriv in flytal separerade med mellanslag:");
+                input = scanner.nextLine();
+                input = input.replaceAll("\n", " ");
+                input = input.replaceAll("\t", " ");
+                input = input.replaceAll("\\s+", " ");
+                input = input.trim();
+
+                String[] operands_array = input.split(" ");
+
+                for (int k = 0; k < operands_array.length; k++)
+                    operands.add(Double.parseDouble(operands_array[k]));
+
+                println("");
+                return operands;
+            }
+
+            catch (NumberFormatException e) {
+
+                println("");
+                println("Input är inkorrekt");
+                println("");
+            }
         }
-
-        catch (InputMismatchException e) {
-
-            println(e);
-        }
-
-        println("");
-
-        return operands;
     }
 }
