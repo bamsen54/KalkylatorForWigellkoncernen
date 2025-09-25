@@ -37,6 +37,8 @@ public class Menu {
                 IO.println("Ej korrekt val");
         }
 
+        println("");
+
         return userChoice;
     }
 }
