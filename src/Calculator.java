@@ -57,7 +57,7 @@ public class Calculator {
 
             catch (ArithmeticException e) {
 
-                println("Can't divide by zero");
+                println("Fel: delade med noll");
             }
         }
 
