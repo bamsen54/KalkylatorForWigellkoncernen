@@ -17,7 +17,7 @@ void main() {
 
             case '+' -> { Calculator.calculate( '+', operands ); }
             case '-' -> { Calculator.calculate( '-', operands ); }
-            case '*' -> {  }
+            case '*' -> { Calculator.calculate( '*', operands ); }
             case '/' -> { Calculator.calculate( '/', operands ); }
             case '%' -> { Calculator.calculate( '%', operands ); }
             case '?' -> { Help.getHelp(); }
