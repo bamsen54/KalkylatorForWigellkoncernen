@@ -1,5 +1,4 @@
 
-
 import static java.io.IO.*;
 import java.io.IO;
 import java.util.ArrayList;
@@ -74,7 +73,6 @@ public class Menu {
             println("Input är inkorrekt");
             println("");
         }
-
 
         return null;
     }
