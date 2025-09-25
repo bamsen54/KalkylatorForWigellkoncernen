@@ -27,7 +27,7 @@ public class Menu {
 
         while( true ) {
 
-            print("Välj operand (+, -, *, /, %)  eller att avsluta programmet (x): ");
+            print("Välj operand (+, -, *, /, %), hjälp (?) eller avsluta programmet (x): ");
 
             userChoice = scanner.next().charAt(0);
 
