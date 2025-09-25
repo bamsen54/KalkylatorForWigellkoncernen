@@ -18,27 +18,19 @@ void main() {
 
         switch (userChoiceOperator) {
 
-            case '+' -> {
-                Calculator.calculate('+', operands);
-            }
-            case '-' -> {
-                Calculator.calculate('-', operands);
-            }
-            case '*' -> {
-                Calculator.calculate('*', operands);
-            }
-            case '/' -> {
-                Calculator.calculate('/', operands);
-            }
-            case '%' -> {
-                Calculator.calculate('%', operands);
-            }
-            case '?' -> {
-                Help.getHelp();
-            }
-            case 'x' -> {
-                return;   // return from main exits program
-            }
+            case '+' -> Calculator.calculate('+', operands);
+
+            case '-' -> Calculator.calculate('-', operands);
+
+            case '*' -> Calculator.calculate('*', operands);
+
+            case '/' -> Calculator.calculate('/', operands);
+
+            case '%' -> Calculator.calculate('%', operands);
+
+            case '?' -> Help.getHelp();
+
+            case 'x' -> { return;  }
         }
     }
 }

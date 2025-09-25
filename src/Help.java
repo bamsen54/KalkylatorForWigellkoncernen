@@ -1,7 +1,6 @@
 
 import static java.io.IO.*;
 
-
 public class Help {
 
     public static void getHelp() {
