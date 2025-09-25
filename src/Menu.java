@@ -11,7 +11,7 @@ public class Menu {
 
     public static boolean is_input_valid(char input) {
 
-        String validInput = "+-*/%x";
+        String validInput = "+-*/%?x";
 
         String inputAsString = String.valueOf( input );
 
