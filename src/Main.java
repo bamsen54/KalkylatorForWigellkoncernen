@@ -4,6 +4,8 @@ public static ArrayList<Double> operands;
 
 void main() {
 
+    println("");
+
     while( true ) {
 
         userChoiceOperator = Menu.displayOperatorMenuAndChoose();
@@ -13,10 +15,11 @@ void main() {
 
         switch( userChoiceOperator ) {
 
-            case '+' -> {  }
-            case '-' -> {  }
-            case '*' -> {  }
-            case '%' -> {  }
+            case '+' -> { Calculator.calculate( '+', operands ); }
+            case '-' -> { Calculator.calculate( '-', operands ); }
+            case '*' -> { Calculator.calculate( '*', operands ); }
+            case '/' -> { Calculator.calculate( '/', operands ); }
+            case '%' -> { Calculator.calculate( '%', operands ); }
             case '?' -> { Help.getHelp(); }
             case 'x' -> {
                 return;   // return from main exits program
