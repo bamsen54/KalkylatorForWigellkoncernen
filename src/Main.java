@@ -1,7 +1,8 @@
 
 import static java.io.IO.*;
 
-void main() {
+public static char userChoice;
 
+void main() {
 
 }

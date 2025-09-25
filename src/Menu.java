@@ -2,12 +2,11 @@
 
 import static java.io.IO.*;
 
+import java.io.IO;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
-
-    public static char userChoice;
 
     public static boolean is_input_valid(char input) {
 
@@ -16,5 +15,28 @@ public class Menu {
         String inputAsString = String.valueOf( input );
 
         return validInput.contains( inputAsString );
+    }
+
+    // returns choice as a character
+    public static char displayMenuAndChoose() {
+
+        Scanner scanner = new Scanner(System.in);
+
+        char userChoice;
+
+        while( true ) {
+
+            print("Välj operand (+, -, *, /, %)  eller att avsluta programmet (x): ");
+
+            userChoice = scanner.next().charAt(0);
+
+            if( Menu.is_input_valid( userChoice ) )
+                break;
+
+            else
+                IO.println("Ej korrekt val");
+        }
+
+        return userChoice;
     }
 }
