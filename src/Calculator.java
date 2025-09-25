@@ -71,6 +71,16 @@ public class Calculator {
             println("Result: " + result);
         }
 
+        else if( operator == '*' ) {
+
+            double result = operands.getFirst();
+
+            for( int k = 1; k < operands.size(); k++ )
+                result += operands.get( k );
+
+            println("Result: " + result);
+        }
+
         println("");
     }
 }

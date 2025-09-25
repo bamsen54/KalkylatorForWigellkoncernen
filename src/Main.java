@@ -15,8 +15,8 @@ void main() {
 
         switch( userChoiceOperator ) {
 
-            case '+' -> {  }
-            case '-' -> {  }
+            case '+' -> { Calculator.calculate( '+', operands ); }
+            case '-' -> { Calculator.calculate( '-', operands ); }
             case '*' -> {  }
             case '/' -> { Calculator.calculate( '/', operands ); }
             case '%' -> { Calculator.calculate( '%', operands ); }
