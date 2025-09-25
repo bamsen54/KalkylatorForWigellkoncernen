@@ -1,4 +1,6 @@
 
+// Simon Toivola SY25 Systemutveckling i Java Uppgift 2
+
 public static char userChoiceOperator;
 public static ArrayList<Double> operands;
 
