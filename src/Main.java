@@ -1,15 +1,15 @@
 
 import static java.io.IO.*;
 
-public static char userChoice;
+public static char userChoiceOperator;
 
 void main() {
 
     while( true ) {
 
-        userChoice = Menu.displayMenuAndChoose();
+        userChoiceOperator = Menu.displayOperatorMenuAndChoose();
 
-        switch( userChoice ) {
+        switch( userChoiceOperator ) {
 
             case '+' -> {  }
             case '-' -> {  }

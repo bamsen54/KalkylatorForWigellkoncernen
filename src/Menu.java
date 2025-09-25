@@ -18,7 +18,7 @@ public class Menu {
     }
 
     // returns choice as a character
-    public static char displayMenuAndChoose() {
+    public static char displayOperatorMenuAndChoose() {
 
         Scanner scanner = new Scanner(System.in);
 
