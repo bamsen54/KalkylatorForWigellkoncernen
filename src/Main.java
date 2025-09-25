@@ -13,16 +13,31 @@ void main() {
         if( userChoiceOperator != '?' && userChoiceOperator != 'x' )
             operands           = Menu.inputOperands();
 
-        switch( userChoiceOperator ) {
+        if( operands != null ) {
 
-            case '+' -> { Calculator.calculate( '+', operands ); }
-            case '-' -> { Calculator.calculate( '-', operands ); }
-            case '*' -> { Calculator.calculate( '*', operands ); }
-            case '/' -> { Calculator.calculate( '/', operands ); }
-            case '%' -> { Calculator.calculate( '%', operands ); }
-            case '?' -> { Help.getHelp(); }
-            case 'x' -> {
-                return;   // return from main exits program
+            switch (userChoiceOperator) {
+
+                case '+' -> {
+                    Calculator.calculate('+', operands);
+                }
+                case '-' -> {
+                    Calculator.calculate('-', operands);
+                }
+                case '*' -> {
+                    Calculator.calculate('*', operands);
+                }
+                case '/' -> {
+                    Calculator.calculate('/', operands);
+                }
+                case '%' -> {
+                    Calculator.calculate('%', operands);
+                }
+                case '?' -> {
+                    Help.getHelp();
+                }
+                case 'x' -> {
+                    return;   // return from main exits program
+                }
             }
         }
     }

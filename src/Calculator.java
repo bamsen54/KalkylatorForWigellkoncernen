@@ -81,6 +81,8 @@ public class Calculator {
             println("Result: " + result);
         }
 
+        operands.clear();
+
         println("");
     }
 }
