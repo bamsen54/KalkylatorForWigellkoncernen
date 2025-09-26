@@ -48,32 +48,37 @@ public class Menu {
 
         String input;
 
-        try {
+        while( true ) {
 
-            IO.println("Skriv in flytal separerade med mellanslag:");
-            input = scanner.nextLine();
-            input = input.replaceAll("\n", " ");
-            input = input.replaceAll("\t", " ");
-            input = input.replaceAll("\\s+", " ");
-            input = input.trim();
+            try {
 
-            String[] operands_array = input.split(" ");
+                IO.println("Skriv in flytal separerade med mellanslag eller (x) för att gå till huvudmenyn:");
+                input = scanner.nextLine();
 
-            for (int k = 0; k < operands_array.length; k++)
-                operands.add(Double.parseDouble(operands_array[k]) + 0.0 );
+                input = input.replaceAll("\\s+", " "); // every series of white space becomes just a " "
+                input = input.trim();                                   // removing trailing and leading zeros
 
-            println("");
+                if( input.equals( "x" ) ) {
 
-            return operands;
+                    println("");
+
+                    return null;
+                }
+
+                String[] operands_array = input.split(" ");
+
+                for (int k = 0; k < operands_array.length; k++)
+                    operands.add(Double.parseDouble(operands_array[k]) + 0.0);
+
+                println("");
+
+                return operands;
+            } catch (NumberFormatException e) {
+
+                println("");
+                println("Input är inkorrekt");
+                println("");
+            }
         }
-
-        catch (NumberFormatException e) {
-
-            println("");
-            println("Input är inkorrekt");
-            println("");
-        }
-
-        return null;
     }
 }
