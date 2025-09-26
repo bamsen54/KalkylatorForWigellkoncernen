@@ -6,6 +6,10 @@ public class Calculator {
 
     public static void calculate(char operator, ArrayList<Double> operands ) {
 
+        if( operands.size() == 1 )
+            println("Resultat: " + operands.getFirst()  + "\n" );
+
+
         if( operands.size() < 2 )
             return;
 
