@@ -8,7 +8,6 @@ public class Calculator {
 
         if( operands.size() < 2 ) {
 
-            println("För få operander minst 2 eller fler\n");
 
             return;
         }

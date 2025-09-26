@@ -62,7 +62,7 @@ public class Menu {
 
                     println("");
 
-                    return null;
+                    return operands;
                 }
 
                 String[] operands_array = input.split(" ");
