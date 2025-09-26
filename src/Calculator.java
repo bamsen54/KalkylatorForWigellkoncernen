@@ -6,11 +6,8 @@ public class Calculator {
 
     public static void calculate(char operator, ArrayList<Double> operands ) {
 
-        if( operands.size() < 2 ) {
-
-
+        if( operands.size() < 2 )
             return;
-        }
 
         if( operator == '-' ) {
 
@@ -19,7 +16,7 @@ public class Calculator {
             for( int k = 1; k < operands.size(); k++ )
                 result -= operands.get( k );
 
-            println("Result: " + result );
+            println("Resultat: " + result );
         }
 
         // can not divide by zero, only first operand can be zero
@@ -40,7 +37,7 @@ public class Calculator {
                     for( int k = 1; k < operands.size(); k++ )
                         result /= operands.get( k );
 
-                    println("Result: " + result);
+                    println("Resulat: " + result);
                 }
 
                 else {  // modulo
@@ -50,7 +47,7 @@ public class Calculator {
                     for( int k = 1; k < operands.size(); k++ )
                         result %= operands.get( k );
 
-                    println("Result: " + result);
+                    println("Resultat: " + result);
                 }
             }
 
@@ -67,7 +64,7 @@ public class Calculator {
             for( int k = 1; k < operands.size(); k++ )
                 result += operands.get( k );
 
-            println("Result: " + result);
+            println("Resultat: " + result);
         }
 
         else if( operator == '*' ) {
@@ -77,7 +74,7 @@ public class Calculator {
             for( int k = 1; k < operands.size(); k++ )
                 result *= operands.get( k );
 
-            println("Result: " + result);
+            println("Resultat: " + result);
         }
 
         operands.clear();
