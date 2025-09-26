@@ -15,23 +15,14 @@ void main() {
         if( userChoiceOperator != '?' && userChoiceOperator != 'x' )
             operands           = Menu.inputOperands();
 
-        if ( operands == null )
-            continue;
-
         switch (userChoiceOperator) {
 
             case '+' -> Calculator.calculate('+', operands);
-
             case '-' -> Calculator.calculate('-', operands);
-
             case '*' -> Calculator.calculate('*', operands);
-
             case '/' -> Calculator.calculate('/', operands);
-
             case '%' -> Calculator.calculate('%', operands);
-
             case '?' -> Help.getHelp();
-
             case 'x' -> { return;  }
         }
     }

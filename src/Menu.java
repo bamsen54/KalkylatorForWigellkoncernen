@@ -52,7 +52,7 @@ public class Menu {
 
             try {
 
-                IO.println("Skriv in flytal separerade med mellanslag eller (x) för att gå till huvudmenyn:");
+                IO.println("Skriv in flyttal separerade med mellanslag eller (x) för att gå till huvudmenyn:");
                 input = scanner.nextLine();
 
                 input = input.replaceAll("\\s+", " "); // every series of white space becomes just a " "
@@ -62,7 +62,7 @@ public class Menu {
 
                     println("");
 
-                    return null;
+                    return operands;
                 }
 
                 String[] operands_array = input.split(" ");
