@@ -7,24 +7,13 @@ public class Calculator {
     public static void calculate(char operator, ArrayList<Double> operands ) {
 
         if( operands.size() == 1 )
-            println("Resultat: " + operands.getFirst()  + "\n" );
-
+            println( "Resultat: " + operands.getFirst() + "\n" );
 
         if( operands.size() < 2 )
             return;
 
-        if( operator == '-' ) {
-
-            double result = operands.getFirst();
-
-            for( int k = 1; k < operands.size(); k++ )
-                result -= operands.get( k );
-
-            println("Resultat: " + result );
-        }
-
         // can not divide by zero, only first operand can be zero
-        else if( operator == '/' || operator == '%' ) {
+        if( operator == '/' || operator == '%' ) {
 
             try {
 
@@ -34,25 +23,18 @@ public class Calculator {
                         throw new ArithmeticException("Division By Zero");
                 }
 
-                if( operator == '/' ) {
+                double result = operands.getFirst();
 
-                    double result = operands.getFirst();
+                for( int k = 1; k < operands.size(); k++ ) {
 
-                    for( int k = 1; k < operands.size(); k++ )
-                        result /= operands.get( k );
+                    switch ( operator ) {
 
-                    println("Resulat: " + result);
+                        case '/' -> result /= operands.get( k );
+                        case '%' -> result %= operands.get( k );
+                    }
                 }
 
-                else {  // modulo
-
-                    double result = operands.getFirst();
-
-                    for( int k = 1; k < operands.size(); k++ )
-                        result %= operands.get( k );
-
-                    println("Resultat: " + result);
-                }
+                println("Resultat: " + result);
             }
 
             catch (ArithmeticException e) {
@@ -61,24 +43,23 @@ public class Calculator {
             }
         }
 
-        else if( operator == '+' ) {
+        else {
 
             double result = operands.getFirst();
 
-            for( int k = 1; k < operands.size(); k++ )
-                result += operands.get( k );
+            for( int k = 1; k < operands.size(); k++ ) {
 
-            println("Resultat: " + result);
-        }
+                double operand = operands.get( k );
 
-        else if( operator == '*' ) {
+                switch( operator ) {
 
-            double result = operands.getFirst();
+                    case '+' -> result += operand;
+                    case '-' -> result -= operand;
+                    case '*' -> result *= operand;
+                }
+            }
 
-            for( int k = 1; k < operands.size(); k++ )
-                result *= operands.get( k );
-
-            println("Resultat: " + result);
+            println("Resultat: " + result );
         }
 
         operands.clear();

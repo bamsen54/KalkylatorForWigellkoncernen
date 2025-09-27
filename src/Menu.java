@@ -68,12 +68,14 @@ public class Menu {
                 String[] operands_array = input.split(" ");
 
                 for (int k = 0; k < operands_array.length; k++)
-                    operands.add(Double.parseDouble(operands_array[k]) + 0.0);
+                    operands.add( Double.parseDouble( operands_array[k] ) + 0.0 );
 
                 println("");
 
                 return operands;
-            } catch (NumberFormatException e) {
+            }
+
+            catch (NumberFormatException e) {
 
                 println("");
                 println("Input är inkorrekt");
