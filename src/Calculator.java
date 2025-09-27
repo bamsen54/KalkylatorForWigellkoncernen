@@ -43,6 +43,25 @@ public class Calculator {
             }
         }
 
+        else {
+
+            double result = operands.getFirst();
+
+            for( int k = 1; k < operands.size(); k++ ) {
+
+                double operand = operands.get( k );
+
+                switch( operator ) {
+
+                    case '+' -> result += operand;
+                    case '-' -> result -= operand;
+                    case '*' -> result *= operand;
+                }
+            }
+
+            println("Resultat: " + result );
+        }
+
         operands.clear();
 
         println("");
