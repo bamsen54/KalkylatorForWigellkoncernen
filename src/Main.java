@@ -13,7 +13,7 @@ void main() {
         userChoiceOperator = Menu.displayOperatorMenuAndChoose();
 
         if( userChoiceOperator != '?' && userChoiceOperator != 'x' )
-            operands           = Menu.inputOperands();
+            operands = Menu.inputOperands();
 
         switch (userChoiceOperator) {
 

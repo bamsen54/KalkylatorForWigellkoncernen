@@ -19,6 +19,5 @@ public class Help {
         println("%: modulos");
         println("^: exponentiering");
         println("--------------------------------------------------------------\n");
-
     }
 }
