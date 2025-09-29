@@ -43,6 +43,22 @@ public class Calculator {
             }
         }
 
+        else if( operator == '^') {
+
+            boolean includesNonPositive = false;
+
+            for( double e: operands ) {
+
+                if( e <= 0 )
+                    includesNonPositive = true;
+            }
+
+            if( includesNonPositive )
+                println("Exponentiering kan endast ha positiva operander");
+
+            
+        }
+
         else {
 
             double result = operands.getFirst();

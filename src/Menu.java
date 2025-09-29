@@ -8,7 +8,7 @@ public class Menu {
 
     public static boolean is_input_valid(char input) {
 
-        String validInput = "+-*/%?x";
+        String validInput = "+-*/%^?x";
 
         String inputAsString = String.valueOf( input );
 
@@ -24,7 +24,7 @@ public class Menu {
 
         while( true ) {
 
-            print("Välj operand (+, -, *, /, %), hjälp (?) eller avsluta programmet (x): ");
+            print("Välj operand (+ - * / % ^), hjälp (?) eller avsluta programmet (x): ");
 
             userChoice = scanner.next().charAt(0);
 
