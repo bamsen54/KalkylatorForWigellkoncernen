@@ -43,6 +43,32 @@ public class Calculator {
             }
         }
 
+        else if( operator == '^') {
+
+            boolean includesNonPositive = false;
+
+            for( double e: operands ) {
+
+                if( e <= 0 )
+                    includesNonPositive = true;
+            }
+
+            if( includesNonPositive ) {
+
+                println("Exponentiering kan endast ha positiva operander\n");
+
+                return;
+            }
+
+            double result = operands.getLast();
+
+            // two - 1 one for 0 indexing and 1 since we have already used the last operand in result = operands.getLast();
+            for( int k = operands.size() - 1 - 1; k >= 0; k-- )
+                result = Math.pow( operands.get( k ), result );
+
+            println("Resultat: " + result );
+        }
+
         else {
 
             double result = operands.getFirst();

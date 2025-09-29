@@ -22,6 +22,7 @@ void main() {
             case '*' -> Calculator.calculate('*', operands);
             case '/' -> Calculator.calculate('/', operands);
             case '%' -> Calculator.calculate('%', operands);
+            case '^' -> Calculator.calculate('^', operands );
             case '?' -> Help.getHelp();
             case 'x' -> { return;  }
         }
