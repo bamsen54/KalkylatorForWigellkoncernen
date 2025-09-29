@@ -77,6 +77,8 @@ public class Menu {
 
             catch (NumberFormatException e) {
 
+                operands.clear();
+
                 println("");
                 println("Input är inkorrekt");
                 println("");
