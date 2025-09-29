@@ -7,7 +7,7 @@ public class Help {
 
         println("--------------------------------------------------------------");
         println("När du väljer i menyn skriv in ETT tecken.");
-        println("När du skriver in talen separera de med mellanslag.");
+        println("När du skriver in talen separera dem med mellanslag.");
         println("Vill du ha negativa tal separera inte minustecknet och talet.");
         println("Flyttal ska skrivas med punkt.");
         println("Exponentiering ska endast ha positiva operander.\n");
